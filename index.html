@@ -15,13 +15,17 @@
       dodger.style.bottom = '0px';
       document.addEventListener('keydown', function(e){
         if(e.which === 37){
+          moveDodgerLeft();
+        }
+      });
+      
+      function moveDodgerLeft(){
           var leftNumbers = dodger.style.left.replace('px', '');
           var left = parseInt(leftNumbers);
           if(left > 0){
             dodger.style.left = `${left - 2}px`;
           }
-        }
-      });
+      }
     </script>
   </body>
 </html>
